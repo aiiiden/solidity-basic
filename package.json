@@ -10,7 +10,8 @@
     "verify-contract": "npx hardhat verify --network linea_sepolia $CONTRACT_ADDRESS",
     "run:simple-storage": "hardhat run scripts/simple-storage.ts",
     "run:variable-test-1": "hardhat run scripts/variable-test-1.ts",
-    "run:mapping": "hardhat run scripts/mapping.ts"
+    "run:mapping": "hardhat run scripts/mapping.ts",
+    "run:struct-array": "hardhat run scripts/struct-array.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.0",
