@@ -6,9 +6,9 @@
   "author": "aiiiden <hjjam100@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "deploy-local:simple-storage": "hardhat ignition deploy ./ignition/modules/SimpleStorage.ts --network localhost",
-    "deploy-linea-sepolia:simple-storage": "hardhat ignition deploy ./ignition/modules/SimpleStorage.ts --network linea_sepolia",
-    "run:simple-storage": "hardhat run scripts/SimpleStorage.ts"
+    "verify-contract": "hardhat verify --network linea_sepolia $CONTRACT_ADDRESS",
+    "run:simple-storage": "hardhat run scripts/simple-storage.ts",
+    "run:variable-test-1": "hardhat run scripts/variable-test-1.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.0",
