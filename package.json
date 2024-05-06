@@ -11,7 +11,8 @@
     "run:simple-storage": "hardhat run scripts/simple-storage.ts",
     "run:variable-test-1": "hardhat run scripts/variable-test-1.ts",
     "run:mapping": "hardhat run scripts/mapping.ts",
-    "run:struct-array": "hardhat run scripts/struct-array.ts"
+    "run:struct-array": "hardhat run scripts/struct-array.ts",
+    "run:number-fight": "hardhat run scripts/number-fight.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.0",

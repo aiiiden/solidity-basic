@@ -15,7 +15,7 @@ async function main() {
   });
 
   // Deployer address PK
-  const account = privateKeyToAccount(process.env.PRIVATE_KEY);
+  const account = privateKeyToAccount(process.env.PRIVATE_KEY_DEPLOYER);
 
   // Deployer wallet client
   const deployer = await hre.viem.getWalletClient(account.address, {

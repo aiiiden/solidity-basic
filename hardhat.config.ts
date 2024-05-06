@@ -9,7 +9,7 @@ const config: HardhatUserConfig = {
   networks: {
     linea_sepolia: {
       url: "https://rpc.sepolia.linea.build/",
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER],
     },
   },
   etherscan: {
