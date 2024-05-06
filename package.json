@@ -6,9 +6,11 @@
   "author": "aiiiden <hjjam100@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "verify-contract": "hardhat verify --network linea_sepolia $CONTRACT_ADDRESS",
+    "compile": "hardhat compile",
+    "verify-contract": "npx hardhat verify --network linea_sepolia $CONTRACT_ADDRESS",
     "run:simple-storage": "hardhat run scripts/simple-storage.ts",
-    "run:variable-test-1": "hardhat run scripts/variable-test-1.ts"
+    "run:variable-test-1": "hardhat run scripts/variable-test-1.ts",
+    "run:mapping": "hardhat run scripts/mapping.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.0",
