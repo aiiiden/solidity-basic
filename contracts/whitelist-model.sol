@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract WhitelistModal is Ownable {
+contract WhitelistModel is Ownable {
   constructor(address initialOwner) Ownable(initialOwner) {}
 
   mapping(address => bool) public whitelist;

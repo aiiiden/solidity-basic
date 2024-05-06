@@ -34,7 +34,7 @@ async function main() {
 
   const { contract, deploymentTransaction } =
     await hre.viem.sendDeploymentTransaction(
-      "WhitelistModal",
+      "WhitelistModel",
       [deployer.account.address],
       {
         client: {
