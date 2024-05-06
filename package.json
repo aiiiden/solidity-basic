@@ -12,7 +12,8 @@
     "run:variable-test-1": "hardhat run scripts/variable-test-1.ts",
     "run:mapping": "hardhat run scripts/mapping.ts",
     "run:struct-array": "hardhat run scripts/struct-array.ts",
-    "run:number-fight": "hardhat run scripts/number-fight.ts"
+    "run:number-fight": "hardhat run scripts/number-fight.ts",
+    "run:whitelist-model": "hardhat run scripts/whitelist-model.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.0",
