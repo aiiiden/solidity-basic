@@ -59,9 +59,23 @@ async function main() {
   console.log("1. BEFORE ELIGIBILITY : ", isUserWhitelisted);
 
   // 관리자 로직 실행
-  const txHash1 = await contract.write.addWhitelist([[user.account.address]], {
-    account: deployer.account,
-  });
+  const txHash1 = await contract.write.updateWhitelist(
+    [
+      [
+        {
+          wallet: user.account.address,
+          isEligible: true,
+        },
+        {
+          wallet: "0x860488D4a93944868252a00a57dE241c0D69fbd8",
+          isEligible: true,
+        },
+      ],
+    ],
+    {
+      account: deployer.account,
+    }
+  );
 
   console.log("2. ADD WHITELIST : ", txHash1);
 
@@ -86,7 +100,7 @@ async function main() {
 
 /**
  * [결과]
- * - 배포 주소 : https://sepolia.lineascan.build/address/0xb0EA8B57695942F4856520136F907D36319C527A#code
+ * - 배포 주소 : https://sepolia.lineascan.build/address/0x263EBD0De8Ea6354048EC735EB1c49B3462337f7#code
  * - 성공적
  */
 
