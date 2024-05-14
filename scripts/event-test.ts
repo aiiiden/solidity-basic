@@ -76,6 +76,13 @@ async function main() {
         newValue: 30n
         }
    */
+
+  const events = await publicClient.getContractEvents({
+    abi: contract.abi,
+    address: contract.address,
+  });
+
+  console.log("- events : ", events);
 }
 
 main()
