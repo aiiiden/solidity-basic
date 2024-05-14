@@ -1,5 +1,5 @@
 import hre from "hardhat";
-import { http } from "viem";
+import { http, parseEventLogs } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { lineaSepolia } from "viem/chains";
 import dotenv from "dotenv";
@@ -55,6 +55,26 @@ async function main() {
    *
    * https://sepolia.lineascan.build/tx/0xe03f4cfaac4659de086b52c57975d7c5be6374f64131ca0822b65621dc98f066
    * 로그가 있다
+   */
+
+  const receipt = await publicClient.waitForTransactionReceipt({
+    hash: txHash2,
+  });
+
+  const [{ eventName, args }] = parseEventLogs({
+    abi: contract.abi,
+    logs: receipt.logs,
+  });
+
+  console.log("- parsed eventName : ", eventName);
+  console.log("- parsed args : ", args);
+
+  /**
+   * {
+        addr: '0x7263B9CfA04C99f689F6b122d640481748418e59',
+        oldValue: 20n,
+        newValue: 30n
+        }
    */
 }
 
