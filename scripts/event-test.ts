@@ -48,6 +48,14 @@ async function main() {
   // 2. Event가 있는 경우
   const txHash2 = await contract.write.increaseWithEvent([10n]);
   console.log("- INCREASE WITH EVENT TX : ", txHash2);
+
+  /**
+   * https://sepolia.lineascan.build/tx/0x56f4b59289691e0fef312b28e5a3e70dac7912b27408687ba2a057cf20a84653
+   * 로그가 없다
+   *
+   * https://sepolia.lineascan.build/tx/0xe03f4cfaac4659de086b52c57975d7c5be6374f64131ca0822b65621dc98f066
+   * 로그가 있다
+   */
 }
 
 main()
